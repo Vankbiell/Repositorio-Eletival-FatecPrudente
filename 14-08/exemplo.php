@@ -7,12 +7,15 @@
 </head>
 <body>
     <?php
-    
-        $dia = date("d");
+    //como executar o código: php -S localhost:8080
+        $dia = date("d"); //como declarar uma variável
         $mes = date("m");
         $ano = date("y");
+
+        echo "<p>" . $dia . "</p>"; 
     ?>
-    <h1>Hoje é dia <?=$dia?> de <!--<?=$mes?>-->Agosto de <?=$ano?></h1>
+    <h1>Hoje é dia <?=$dia?> de <!--<?=$mes?>-->Agosto de <?=$ano?></h1>    
+
 
 </body>
 </html>
