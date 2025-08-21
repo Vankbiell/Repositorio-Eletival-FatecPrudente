@@ -9,7 +9,7 @@
 <body> 
 <div class="container">
 <h1>Exemplo - Soma de Valores</h1>
-<form method="post">
+<form method="post" action="resposta_exemplo1.php">
   
 <div class="mb-3">
               <label for="valor1" class="form-label">Número 1</label>
