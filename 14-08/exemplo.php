@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+    // https://vanessaborges2.github.io/Gerador-Formulario/
     //como executar o código: php -S localhost:8080
         $dia = date("d"); //como declarar uma variável
         $mes = date("m");
