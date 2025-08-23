@@ -18,8 +18,8 @@
             else{
                 echo "<h1>Algum dos valores é igual a zero.</h1>";
             }
-        
-        
+        //git config --global user.email "you@example.com"
+        //git config --global user.name ""
         
         ?>
     </div>
