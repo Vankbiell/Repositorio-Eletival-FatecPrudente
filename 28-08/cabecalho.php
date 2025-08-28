@@ -9,7 +9,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" href="#">Brand</a>
+    <a class="navbar-brand" href="#">Aula 28-08</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,7 +23,7 @@
   <ul class="dropdown-menu" aria-labelledby="dropdown1">
     <li><a class="dropdown-item" href="estrutura1.php">if-Else</a></li>
 <li><a class="dropdown-item" href="estrutura2.php">if-Elseif-Else</a></li>
-<li><a class="dropdown-item" href="pstutura3.php">Switch</a></li>
+<li><a class="dropdown-item" href="estrutura3.php">Switch</a></li>
   </ul>
 </li>
 
@@ -32,8 +32,8 @@
     Estrutura de Repetição
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdown2">
-    <li><a class="dropdown-item" href="#">while</a></li>
-<li><a class="dropdown-item" href="#">do-while</a></li>
+    <li><a class="dropdown-item" href="estrutura4.php">while</a></li>
+<li><a class="dropdown-item" href="estrutura5.php">do-while</a></li>
 <li><a class="dropdown-item" href="#">for</a></li>
   </ul>
 </li>
