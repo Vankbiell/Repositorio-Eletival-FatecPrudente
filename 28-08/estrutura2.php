@@ -1,8 +1,8 @@
 <?php 
     include("cabecalho.php");
-    $valor  = 10;
+    $valor  = 11;
     if($valor > 10 )
-        echo "valor amior que  10";
+        echo "valor maior que  10";
     elseif($valor < 10){
         echo"Valor menor que 10";
     }
