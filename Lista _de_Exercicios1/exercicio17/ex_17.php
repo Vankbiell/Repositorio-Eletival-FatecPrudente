@@ -27,9 +27,9 @@
         $capital = $_POST["capital"];
         $tx_juros = $_POST["tx_juros"];
         $periodo = $_POST["periodo"];
-        $taxa_decimal = $tx_taxa / 100;
+        $taxa_decimal = $tx_juros / 100;
         $juros = $capital * $taxa_decimal * $periodo;
-        echo "O valor da taxa de juros $tx_juros";
+        echo "O valor do juros $juros";
 
     }
 ?>
