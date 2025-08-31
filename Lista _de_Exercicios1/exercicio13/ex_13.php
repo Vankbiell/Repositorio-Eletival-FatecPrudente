@@ -16,6 +16,14 @@
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
+<?php
+    if ($_SERVER['REQUEST_METHOD'] == "POST"){
+        $metros = $_POST["metros"];
+        $centimetros = $metros * 100;
+        echo "O valor convertido de metros é $centimetros";
+
+    }
+?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </div>
 </body>
