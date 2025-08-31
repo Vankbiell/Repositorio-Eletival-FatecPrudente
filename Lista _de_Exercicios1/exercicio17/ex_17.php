@@ -24,7 +24,13 @@
 </form>
 <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST"){
-        
+        $capital = $_POST["capital"];
+        $tx_juros = $_POST["tx_juros"];
+        $periodo = $_POST["periodo"];
+        $taxa_decimal = $tx_taxa / 100;
+        $juros = $capital * $taxa_decimal * $periodo;
+        echo "O valor da taxa de juros $tx_juros";
+
     }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
