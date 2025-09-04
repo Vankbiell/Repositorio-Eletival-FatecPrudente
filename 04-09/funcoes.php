@@ -1,3 +1,3 @@
 <?php
     $nome = "Gabriel";
-    echo "<p>"
+    echo "<p></p>";
