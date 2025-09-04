@@ -35,10 +35,6 @@ include("cabecalho.php");
             $posicao = 6;
     }
 
-    if($valor7 < $menor){
-            $menor = $valor7;
-            $posicao = 7;
-    }
 
     echo "<p> O menor valor informado é: $menor e está na posição $posicao";
 
