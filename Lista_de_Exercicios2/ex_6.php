@@ -1,7 +1,9 @@
 
 <?php
 include("cabecalho.php");
-    $valor = 8;
-    for
+    $valor = 10;
+    for($i=1; $i<=$valor; $i++){
+        echo"<p> Número $i</p>";
+    }
 include ("rodape.php");
 ?>
