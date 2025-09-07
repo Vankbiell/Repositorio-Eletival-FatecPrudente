@@ -13,7 +13,7 @@
         $nota3 = $_POST["nota3"];
         $media = ($nota1 + $nota2 + $nota3) / 3
         echo "<h1>Média $media </h1>";
-        echo '<button type="button" onclick="history.back()" class="btn btn-primary">Voltar</button>'
+        echo '<button type="button" onclick="history.back()" class="btn btn-primary">Voltar</button>';
         //git config --global user.email "you@example.com"
         //git config --global user.name ""
         
