@@ -13,7 +13,8 @@
     $vetor[4] = 6;
     echo "<p> Novo valor da posição 4: ".$vetor[4]."</p>";
 
-    $vetor['nome'] = "Vanessa";
+    $v = 'nome';
+    $vetor[ $v] = "Vanessa";
     print_r($vetor);
 
     $valores = [
