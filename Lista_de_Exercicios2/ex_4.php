@@ -10,6 +10,4 @@ include("cabecalho.php");
         echo "<p>O valor nâo tem desconto</p>";
         echo "<p> O valor é $valor</p>";
     }
-
-include ("rodape.php");
 ?>

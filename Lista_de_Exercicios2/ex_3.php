@@ -9,6 +9,4 @@ include("cabecalho.php");
         echo " O valor A é o maior, $numero1,$numero2";
     else
         echo " O valor B é o maior, $numero2,$numero1";
-
-include ("rodape.php");
 ?>

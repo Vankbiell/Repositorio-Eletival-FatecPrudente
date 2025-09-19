@@ -7,5 +7,4 @@ include("cabecalho.php");
         $valor -= 1;
         $i++;
     }while($valor);
-include ("rodape.php");
 ?>

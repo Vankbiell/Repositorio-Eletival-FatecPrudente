@@ -8,5 +8,4 @@ include("cabecalho.php");
         $i++;
     }
     echo "<p>Total: $total</p>";
-include ("rodape.php");
 ?>

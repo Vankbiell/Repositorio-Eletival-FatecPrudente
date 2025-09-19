@@ -1,42 +1,72 @@
 <?php
 include("cabecalho.php");
-    $valor1 = 5;
-    $valor2 = 8;
-    $valor3 = 2;
-    $valor4 = 20;
-    $valor5 = 1;
-    $valor6 = 90;
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    
+        $valor1 = $_POST['valor1'];
+        $valor2 = $_POST['valor2'];
+        $valor3 = $_POST['valor3'];
+        $valor4 = $_POST['valor4'];
+        $valor5 = $_POST['valor5'];
+        $valor6 = $_POST['valor6'];
 
-    $menor = $valor1;
-    $posicao = 1;
+        $menor = $valor1;
+        $posicao = 1;
 
-    if($valor2 < $menor){
-        $menor = $valor2;
-        $posicao = 2;
+        if($valor2 < $menor){
+            $menor = $valor2;
+            $posicao = 2;
+        }
+
+        if($valor3 < $menor){
+            $menor = $valor3;
+            $posicao = 3;
+        }
+
+        if($valor4 < $menor){
+            $menor = $valor4;
+            $posicao = 4;
+        }
+
+        if($valor5 < $menor){
+            $menor = $valor5;
+            $posicao = 5;
+        }
+
+        if($valor6 < $menor){
+                $menor = $valor6;
+                $posicao = 6;
+        }
+        echo "<p> O menor valor informado é: $menor e está na posição $posicao";
     }
-
-    if($valor3 < $menor){
-        $menor = $valor3;
-        $posicao = 3;
-    }
-
-    if($valor4 < $menor){
-        $menor = $valor4;
-        $posicao = 4;
-    }
-
-    if($valor5 < $menor){
-        $menor = $valor5;
-        $posicao = 5;
-    }
-
-    if($valor6 < $menor){
-            $menor = $valor6;
-            $posicao = 6;
-    }
-
-
-    echo "<p> O menor valor informado é: $menor e está na posição $posicao";
-
-include ("rodape.php");
+?>
+<div class="container py-3">
+    <form method="post">
+        <div class="mb-3">
+            <label for="valor1" class="form-label">Informe o primeiro valor</label>
+            <input type="number" id="valor1" name="valor1" class="form-control" required="">
+        </div>
+        <div class="mb-3">
+            <label for="valor3" class="form-label">Informe o segundo valor</label>
+            <input type="number" id="valor2" name="valor2" class="form-control" required="">
+        </div>
+        <div class="mb-3">
+            <label for="valor3" class="form-label">Informe o terceiro valor</label>
+            <input type="number" id="valor3" name="valor3" class="form-control" required="">
+        </div>
+        <div class="mb-3">
+            <label for="valor4" class="form-label">Informe o quarto valor</label>
+            <input type="number" id="valor4" name="valor4" class="form-control" required="">
+        </div>
+        <div class="mb-3">
+            <label for="valor5" class="form-label">Informe o quinto valor</label>
+            <input type="number" id="valor5" name="valor5" class="form-control" required="">
+        </div>
+        <div class="mb-3">
+            <label for="valor6" class="form-label">Informe o sexto valor</label>
+            <input type="number" id="valor6" name="valor6" class="form-control" required="">
+        </div>
+    </form>
+</div>
+<?php
+    include ("rodape.php");
 ?>

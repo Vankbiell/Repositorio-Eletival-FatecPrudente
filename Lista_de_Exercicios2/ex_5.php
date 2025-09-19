@@ -18,5 +18,4 @@ include("cabecalho.php");
             default:
                  echo "<p>Número não possui mês correspondente!</p>";
     }
-include ("rodape.php");
 ?>

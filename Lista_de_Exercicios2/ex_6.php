@@ -5,5 +5,4 @@ include("cabecalho.php");
     for($i=1; $i<=$valor; $i++){
         echo"<p> Número $i</p>";
     }
-include ("rodape.php");
 ?>

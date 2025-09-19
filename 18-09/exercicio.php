@@ -12,7 +12,7 @@
 <form method="post">
   <div class="mb-3">
     <?php for($i=1;$i<=10;$i++): ?>
-      <label for="valor[]" class="form-label">Informe o 1º valor</label>
+      <label for="valor[]" class="form-label">Informe o valor</label>
       <input type="number" id="valor[]" name="valor[]" class="form-control" required="">
     <?php endfor; ?>
   </div>

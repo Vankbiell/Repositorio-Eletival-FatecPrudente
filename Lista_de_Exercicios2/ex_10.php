@@ -1,14 +1,13 @@
 
 <?php
 include("cabecalho.php");
-    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+
         $valor = $_POST['valor'];
         echo"<h1>Tabuada</h1>";
         for($i=1; $i<=10; $i++){
             $resultado = $valor * $i;
             echo"<p>$valor X $i = $resultado</p>";
         }
-    }
 ?>
 
 <div class="container py-3">

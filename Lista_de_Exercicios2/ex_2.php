@@ -11,5 +11,4 @@ include("cabecalho.php");
         $soma = $valor1 + $valor2;
         echo"A soma dos dois números é: $soma";
     }
-include ("rodape.php");
 ?>
