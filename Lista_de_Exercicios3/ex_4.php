@@ -23,20 +23,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $dia = $_POST['dia'];
     $mes = $_POST['mes'];
     $ano = $_POST['ano'];
-
-    $dia = (int)$dia;
-    $mes = (int)$mes;
-    $ano = (int)$ano;
-
     if (checkdate($mes, $dia, $ano)) {
-        $data = DateTime::createFromFormat('Y-m-d', "$ano-$mes-$dia");
-        $dataFormatada = $data->format('d/m/Y');
-        $mensagem = "<div class='sucesso'>Data válida: <strong>$dataFormatada</strong></div>";
+    // Converte para timestamp e formata com date()
+    $timestamp = mktime(0, 0, 0, $mes, $dia, $ano);
+    $dataFormatada = date("d/m/Y", $timestamp);
+    
+    echo "Data válida: $dataFormatada";
     } else {
-        $mensagem = "<div class='erro'>Data inválida! Por favor, verifique os valores.</div>";
+        echo "Data inválida!";
     }
-} else {
-    $mensagem = "<div class='info'>Informe uma data para validar</div>";
 }
 include ("rodape.php");
 ?>
