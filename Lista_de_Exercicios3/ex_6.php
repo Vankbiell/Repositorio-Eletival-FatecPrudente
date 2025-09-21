@@ -7,6 +7,7 @@ include("cabecalho.php");
             <label for="numero" class="form-label">Informe o </label>
             <input type="number" id="numero" name="numero" class="form-control" required="">
         </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 </div>
 <?php
