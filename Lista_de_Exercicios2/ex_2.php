@@ -8,7 +8,7 @@ include("cabecalho.php");
             <input type="number" id="valor1" name="valor1" class="form-control" required="">
         </div>
         <div class="mb-3">
-            <label for="valor3" class="form-label">Informe o segundo valor</label>
+            <label for="valor2" class="form-label">Informe o segundo valor</label>
             <input type="number" id="valor2" name="valor2" class="form-control" required="">
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
@@ -29,4 +29,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo"A soma dos dois números é: $soma";
     }
 }
+include ("rodape.php");
 ?>
