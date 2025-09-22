@@ -21,11 +21,11 @@
     Exercícios
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdown1">
-    <li><a class="dropdown-item" href="#">Exercício 1 -</a></li>
-<li><a class="dropdown-item" href="#">Exercício 2 -</a></li>
-<li><a class="dropdown-item" href="#">Exercício 3 -</a></li>
-<li><a class="dropdown-item" href="#">Exercício 4 -</a></li>
-<li><a class="dropdown-item" href="#">Exercício 5 -</a></li>
+    <li><a class="dropdown-item" href="ex_1.php">Exercício 1 -</a></li>
+<li><a class="dropdown-item" href="ex_2.php">Exercício 2 -</a></li>
+<li><a class="dropdown-item" href="ex_3.php">Exercício 3 -</a></li>
+<li><a class="dropdown-item" href="ex_4.php">Exercício 4 -</a></li>
+<li><a class="dropdown-item" href="ex_5.php">Exercício 5 -</a></li>
   </ul>
 </li>
       </ul>
