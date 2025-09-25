@@ -1,4 +1,5 @@
 <?php
 
-    $dominio = "";//definição da string de conexão
+    $dominio = "mysql";//definição da string de conexão
     
+
