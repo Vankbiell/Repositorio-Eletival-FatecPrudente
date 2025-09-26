@@ -57,26 +57,14 @@
                         <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     
-                    <form id="cadastroForm">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="nome" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="sobrenome" class="form-label">Sobrenome</label>
-                                <input type="text" class="form-control" id="sobrenome" placeholder="Seu sobrenome" required>
-                            </div>
-                        </div>
-                        
+                    <form method = "POST">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                         </div>   
                         <div class="mb-3">
                             <label for="emailCadastro" class="form-label">E-mail</label>
                             <input type="email" class="form-control" id="emailCadastro" placeholder="seu@email.com" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="telefone" class="form-label">Telefone</label>
-                            <input type="tel" class="form-control" id="telefone" placeholder="(11) 99999-9999">
                         </div>
                         
                         <div class="mb-3">
@@ -150,5 +138,21 @@
             e.target.value = value;
         });
     </script>
+    <?php
+        if($_SERVER['REQUEST_METHOD'] == "POST")
+        {
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+            $senha = password_hash($senha, PASSWORD_BCRYPT);
+            require("conexao.php");
+            try{
+                $stmt = 
+            }catch(){
+
+            }
+        }
+
+    ?>
 </body>
 </html>
