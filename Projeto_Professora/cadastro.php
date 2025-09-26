@@ -63,13 +63,13 @@
                             <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
                          </div>   
                         <div class="mb-3">
-                            <label for="emailCadastro" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="emailCadastro" placeholder="seu@email.com" required>
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
                         </div>
                         
                         <div class="mb-3">
-                            <label for="senhaCadastro" class="form-label">Senha</label>
-                            <input type="password" class="form-control" id="senhaCadastro" placeholder="Crie uma senha forte" required>
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="senha" placeholder="Crie uma senha forte" required>
                             <div class="form-text">A senha deve conter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas e números.</div>
                         </div>
                         
@@ -103,7 +103,7 @@
         document.getElementById('cadastroForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const senha = document.getElementById('senhaCadastro').value;
+            const senha = document.getElementById('senha').value;
             const confirmarSenha = document.getElementById('confirmarSenha').value;
             
             if (senha !== confirmarSenha) {
@@ -120,36 +120,25 @@
             alert('Cadastro realizado com sucesso!');
         });
 
-        // Máscara para telefone
-        document.getElementById('telefone').addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 11) value = value.slice(0, 11);
-            
-            if (value.length > 10) {
-                value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-            } else if (value.length > 6) {
-                value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
-            } else if (value.length > 2) {
-                value = value.replace(/(\d{2})(\d{0,5})/, '($1) $2');
-            } else if (value.length > 0) {
-                value = value.replace(/(\d{0,2})/, '($1');
-            }
-            
-            e.target.value = value;
-        });
     </script>
     <?php
         if($_SERVER['REQUEST_METHOD'] == "POST")
         {
+            require("conexao.php");
             $nome = $_POST['nome'];
             $email = $_POST['email'];
             $senha = $_POST['senha'];
             $senha = password_hash($senha, PASSWORD_BCRYPT);
-            require("conexao.php");
+            
             try{
-                $stmt = 
-            }catch(){
-
+                $stmt = $pdo->prepare("INSERT INTO usuario(nome,email,senha) VALUES (?, ?, ?)");
+                if ($stmt->execute([$nome, $email, $senha])){
+                    header("location: index.php?cadastro=true");
+                } else {
+                    header("location: index.php?cadastro=false");
+                }
+            }catch(Exception $e){
+                echo ("Erro ao executar o comando SQL: ".$e->get_Message());
             }
         }
 
