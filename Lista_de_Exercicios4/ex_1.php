@@ -4,7 +4,7 @@ include("cabecalho.php");
 <div class="container py-3">
     <form method="post">
     <div class="mb-3">
-        <?php for($i=1;$i<=5;$i++): ?>
+        <?php for($i=1;$i<=2;$i++): ?>
         <h5>Informe o nome e telefone do seu contato</h5>
         <label for="nome[]" class="form-label">Nome: </label>
         <input type="text" id="nome[]" name="nome[]" class="form-control" required="">
@@ -19,12 +19,8 @@ include("cabecalho.php");
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $vetor_nome = $_POST['valor'];
     $vetor_numero = $_POST['numero'];
-    sort($vetor_nome);
-    sort($vetor_numero);
-    rsort($vetor_nome);
-    rsort($vetor_numero);
     foreach($vetor_nome && $vetor_numero as $v){
-      echo"<p>$v</p>";
+      echo"<p>$vetor_nome, $vetor_numero, $v</p>";
     }
 }
 include ("rodape.php");
