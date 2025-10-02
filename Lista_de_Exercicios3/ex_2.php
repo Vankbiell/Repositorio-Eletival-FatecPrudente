@@ -13,8 +13,8 @@ include("cabecalho.php");
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $palavra = $_POST['palavra'];
-    echo "<p>Todos os caracteres em maiúsculo: ".strtoupper($palavra)."</p>";
-    echo "<p>Todos os caracteres em minúsculo: ".strtolower($palavra)."</p>";
+    echo "<p>Todos os caracteres em maiúsculo: ".strtoupper($palavra)."</p>"; 
+    echo "<p>Todos os caracteres em minúsculo: ".strtolower($palavra)."</p>"; 
 }
 include ("rodape.php");
 ?>
