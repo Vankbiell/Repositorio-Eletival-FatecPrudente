@@ -45,12 +45,12 @@ CREATE TABLE IF NOT EXISTS `projetophp`.`produto` (
   `valor` DECIMAL(8,2) NOT NULL,
   `categoria_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_produto_categoria_idx` (`categoria_id` ASC),
-  CONSTRAINT `fk_produto_categoria`
-    FOREIGN KEY (`categoria_id`)
-    REFERENCES `projetophp`.`categoria` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+INDEX `fk_produto_categoria_idx` (`categoria_id` ASC),
+CONSTRAINT `fk_produto_categoria`
+  FOREIGN KEY (`categoria_id`)
+  REFERENCES `projetophp`.`categoria` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
