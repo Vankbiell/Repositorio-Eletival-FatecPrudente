@@ -8,13 +8,13 @@
         echo "Erro: ".$e->getMessage();
     }
     if (isset($_GET['cadastro']) && $_GET['cadastro']){
-        echo "<p class='text-success'>Cadastro realizado!</p>";
+        echo "<p class='text-success'>Cadastro de categoria realizado!</p>";
     } else if (isset($_GET['cadastro']) && !$_GET['cadastro']){
         echo "<p class='text-danger'>Erro ao cadastrar!</p>";
     }
-        if (isset($_GET['cadastro']) && $_GET['cadastro']){
-        echo "<p class='text-success'>Cadastro realizado!</p>";
-    } else if (isset($_GET['cadastro']) && !$_GET['cadastro']){
+        if (isset($_GET['editar']) && $_GET['editar']){
+        echo "<p class='text-success'>Edição de categoria realizado!</p>";
+    } else if (isset($_GET['editar']) && !$_GET['editar']){
         echo "<p class='text-danger'>Erro ao cadastrar!</p>";
     }
 ?>
