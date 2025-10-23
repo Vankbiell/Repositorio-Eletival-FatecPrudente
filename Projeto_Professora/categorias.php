@@ -12,6 +12,11 @@
     } else if (isset($_GET['cadastro']) && !$_GET['cadastro']){
         echo "<p class='text-danger'>Erro ao cadastrar!</p>";
     }
+        if (isset($_GET['cadastro']) && $_GET['cadastro']){
+        echo "<p class='text-success'>Cadastro realizado!</p>";
+    } else if (isset($_GET['cadastro']) && !$_GET['cadastro']){
+        echo "<p class='text-danger'>Erro ao cadastrar!</p>";
+    }
 ?>
 
 <h2>Categorias</h2>
@@ -32,8 +37,8 @@
             <td><?= $d['id'] ?></td>
             <td><?= $d['nome'] ?></td>
             <td class="d-flex gap-2">
-                <a href="editar_categoria.php?id=<? = $d['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
-                <a href="consultar_categoria.php?id=<? = $d['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
+                <a href="editar_categoria.php?id=<?= $d['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
+                <a href="consultar_categoria.php?id=<?= $d['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
             </td>
         </tr>
         <?php
