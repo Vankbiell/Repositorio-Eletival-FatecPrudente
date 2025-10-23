@@ -15,7 +15,7 @@
         try{
             $stmt = 
                 $pdo->prepare("DELETE from categoria WHERE id = ?");
-            if($stmt->execute([$nome, $id])){
+            if($stmt->execute([$id])){
                 header('location: categorias.php?excluir=true');
             } else {
                 header('location: categorias.php?excluir=false');
@@ -26,15 +26,15 @@
     }
 ?>
 
-    <h1>Editar Categoria</h1>
+    <h1>Consultar Categoria</h1>
     <form method="post">
         <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
         <div class="mb-3">
-            <label for="nome" class="form-label">Informe o nome da categoria:</label>
+            <label for="nome" class="form-label">Nome da categoria:</label>
             <input disabled value="<?= $categoria['nome']?>" type="text" id="nome" name="nome" class="form-control" required="">
-            <p>Deseja excluir esse registro </p>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <p>Deseja excluir esse registro?</p>
+        <button type="submit" class="btn btn-danger">Excluir</button>
         <button onclick="history.back();" type="button" class="btn btn-secondary">
             Voltar
         </button>
@@ -42,4 +42,5 @@
 
 <?php
     require("rodape.php");
+?>
 ?>
