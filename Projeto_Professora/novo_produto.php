@@ -2,10 +2,27 @@
     require("cabecalho.php");
     require("conexao.php");
     try{
-        $stmt = $pdo->query(SELECT * FROM categoria);
+        $stmt = $pdo->query("SELECT * FROM categoria");
+        $categorias = $stmt->fetchALL();
     }catch(Exception $d){
         
         echo "Erro ao consultar categorias: ".$e->getMessage();
+    }
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $decicao = $_POST['descricao'];
+        $valor = $_POST['descricao'];
+        $categoria = $_POST['categoria'];
+        try{
+            $stmt = $pdo->prepare("INSERT INTO produto (descricao, valor, categoria_id) VALUES(?, ?, ?)");
+            if($stmt->execute([$descricao, $valor, $categoria])){
+                header("locatiom: produtos.php?cadastro=true");
+            }
+            else{
+                header("locatiom: produtos.php?cadastro=false");
+            }
+        }catch (Exception $e){
+            echo "Erro ao inserir: ".$e->getMessage();
+        }
     }
 ?>
 
