@@ -3,7 +3,7 @@
     require("conexao.php");
 
     try{
-        $stmt = $pdo->query("SELECT * FROM produto p 
+        $stmt = $pdo->query("SELECT c. nome, p. * FROM produto p 
                                 INNER JOIN categoria c ON c.id = p.categoria_id");
         $dados = $stmt->fetchAll();
     } catch(\Exception $e){
@@ -23,7 +23,7 @@
 ?>
 
 <h2>Produtos</h2>
-<a href="nova_produto.php" class="btn btn-success mb-3">Novo Registro de Produto</a>
+<a href="novo_produto.php" class="btn btn-success mb-3">Novo Registro de Produto</a>
 <table class="table table-hover table-striped">
     <thead>
         <tr>
