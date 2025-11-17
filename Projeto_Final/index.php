@@ -46,11 +46,11 @@
     <form action="index.php" method="POST">
       <div class="mb-3">
         <label for="emailLogin" class="form-label">Email</label>
-        <input type="email" class="form-control" id="emailLogin" name="email" placeholder="Digite seu email" required />
+        <input type="email" class="form-control" id="emailLogin" name="email_usuario" placeholder="Digite seu email" required />
       </div>
       <div class="mb-3">
         <label for="senhaLogin" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="senhaLogin" name="senha" placeholder="Digite sua senha" required />
+        <input type="password" class="form-control" id="senhaLogin" name="senha_usuario" placeholder="Digite sua senha" required />
       </div>
       <button type="submit" class="btn btn-primary">Entrar</button>
     </form>
