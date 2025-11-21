@@ -33,7 +33,7 @@
         <tr>
             <th>ID</th>
             <th>Descrição</th>
-            <th>Categoria</th>
+            <th>Fornecedor</th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -42,9 +42,10 @@
             foreach($dados as $d):
         ?>
         <tr>
-            <td><?= $d['id'] ?></td>
-            <td><?= $d['descricao'] ?></td>
-            <td><?= $d['nome'] ?></td>
+            <td><?= $d['id_produto'] ?></td>
+            <td><?= $d['descricao_produto'] ?></td>
+            <td><?= $d['valor'] ?></td>
+            <td><?= $d['quantidade_produto'] ?></td>
             <td class="d-flex gap-2">
                 <a href="editar_produto.php?id=<?= $d['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
                 <a href="consultar_produto.php?id=<?= $d['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
