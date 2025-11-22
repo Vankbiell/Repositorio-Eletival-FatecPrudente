@@ -26,9 +26,9 @@
     Cadastros
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdown1">
-    <li><a class="dropdown-item" href="#">Produtos</a></li>
-<li><a class="dropdown-item" href="#">Fornecedor</a></li>
-<li><a class="dropdown-item" href="#">Vendas</a></li>
+    <li><a class="dropdown-item" href="produto.php">Produtos</a></li>
+<li><a class="dropdown-item" href="fornecedor.php">Fornecedor</a></li>
+<li><a class="dropdown-item" href="vendas.php">Vendas</a></li>
   </ul>
 </li>
 
