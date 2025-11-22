@@ -72,6 +72,11 @@
     </div>
 
     <div class="mb-3">
+        <label for="quantidade" class="form-label">Informe a Quantidade</label>
+        <input type="number" id="quantidade" name="quantidade" class="form-control">
+    </div>
+
+    <div class="mb-3">
         <label for="fornecedor" class="form-label">Selecione o Fornecedor</label>
         <select id="fornecedor" name="fornecedor" class="form-select">
             <?php foreach ($fornecedores as $f): ?>

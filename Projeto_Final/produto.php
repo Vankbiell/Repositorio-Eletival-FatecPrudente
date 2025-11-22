@@ -41,6 +41,8 @@
         <tr>
             <th>ID</th>
             <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
             <th>Fornecedor</th>
             <th>Ações</th>
         </tr>
@@ -50,6 +52,8 @@
         <tr>
             <td><?= $d['id_produto'] ?></td>
             <td><?= $d['descricao_produto'] ?></td>
+            <td><?= $d['quantidade_produto'] ?></td>
+            <td><?= $d['valor_produto'] ?></td>
             <td><?= $d['nome_fornecedor'] ?></td>
             <td class="d-flex gap-2">
                 <a href="editar_produto.php?id=<?= $d['id_produto'] ?>" class="btn btn-sm btn-warning">Editar</a>
