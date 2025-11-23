@@ -30,19 +30,5 @@
 <li><a class="dropdown-item" href="fornecedor.php">Fornecedor</a></li>
 <li><a class="dropdown-item" href="vendas.php">Vendas</a></li>
   </ul>
-</li>
-
-<li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="dropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Relatórios
-  </a>
-  <ul class="dropdown-menu" aria-labelledby="dropdown2">
-    <li><a class="dropdown-item" href="#">Vendas</a></li>
-<li><a class="dropdown-item" href="#">Estoque</a></li>
-  </ul>
-</li>
-      </ul>
-    </div>
-  </div>
 </nav>
 <div class="container py-3">
