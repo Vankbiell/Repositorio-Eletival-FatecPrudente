@@ -107,11 +107,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if ($ok1 && $ok2) {
             $pdo->commit();
-            header('Location: produtos.php?excluir=true');
+            header('Location: produto.php?excluir=true');
             exit;
         } else {
             $pdo->rollBack();
-            header('Location: produtos.php?excluir=false');
+            header('Location: produto.php?excluir=false');
             exit;
         }
     } catch (Exception $e) {
